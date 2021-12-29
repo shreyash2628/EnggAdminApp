@@ -13,4 +13,27 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+
+
+
+
+
+    <style name="EditTextList" parent="Widget.AppCompat.EditText">
+        <item name="android:textColor">@color/textColorDark</item>
+        <item name="android:cursorVisible">true</item>
+        <item name="android:textCursorDrawable">@null</item>
+        <item name="android:backgroundTint">@color/md_blue_grey_800</item>
+        <item name="android:textColorHighlight">@color/md_blue_200</item>
+    </style>
+
+    <style name="EditTextLogin" parent="Widget.AppCompat.EditText">
+        <item name="android:textColor">@color/textColorDark</item>
+        <item name="android:cursorVisible">true</item>
+        <item name="android:textCursorDrawable">@null</item>
+        <item name="android:textColorHighlight">@color/md_blue_200</item>
+    </style>
+
+
+
 </resources>

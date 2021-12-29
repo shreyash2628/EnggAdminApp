@@ -3,4 +3,9 @@
     <string name="mobile_no">Mobile No</string>
     <string name="password">Password</string>
     <string name="sign_in">Sign In</string>
+
+
+    <style name="FlatButton" parent="Widget.AppCompat.Button.Borderless">
+    </style>
+
 </resources>

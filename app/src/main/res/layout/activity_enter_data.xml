@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,4 +7,258 @@
     android:layout_height="match_parent"
     tools:context=".EnterData">
 
-</RelativeLayout>
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView_id"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="460dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:ignore="MissingConstraints">
+
+        <RelativeLayout
+            android:id="@+id/LayoutId"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/colg_name_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:focusedByDefault="true"
+                android:fontFamily="@font/nunito_semibold"
+                android:text="College Name:"
+                android:textAllCaps="false"
+                android:textColor="@color/textColorDark"
+                android:textSize="18sp"
+                 />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/colg_name_et"
+                style="@style/EditTextList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/colg_name_tv"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/nunito"
+                android:hint="Type here"
+                android:inputType="textCapWords"
+                android:textSize="16sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/address_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/nunito"
+                android:text="College Address : "
+                android:textAllCaps="false"
+                android:textColor="@color/textColorDark"
+                android:textSize="16sp"
+                android:visibility="visible"
+                android:layout_below="@id/colg_name_et" />
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/address_Et"
+                style="@style/EditTextList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/address_tv"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/nunito"
+                android:hint="Type here"
+                android:inputType="textCapWords"
+                android:textSize="16sp" />
+
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/cetScoretv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/address_Et"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/nunito"
+                android:text="CET Score : "
+                android:textAllCaps="false"
+                android:textColor="@color/textColorDark"
+                android:textSize="16sp"
+                android:visibility="visible" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/cetScoreEt"
+                style="@style/EditTextList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cetScoretv"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/nunito"
+                android:hint="Type here"
+                android:inputType="numberDecimal"
+                android:textSize="16sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/feesTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cetScoreEt"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/nunito"
+                android:text="Fees : "
+                android:textAllCaps="false"
+                android:textColor="@color/textColorDark"
+                android:textSize="16sp"
+                android:visibility="visible" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                style="@style/EditTextList"
+                android:id="@+id/feesEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/feesTv"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/nunito"
+                android:hint="Type here"
+                android:inputType="number"
+                android:textSize="16sp" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/placementPercentageTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/feesEt"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/nunito"
+                android:text="Placement Percentage: "
+                android:textAllCaps="false"
+                android:textColor="@color/textColorDark"
+                android:textSize="16sp"
+                android:visibility="visible" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/placementPercentageEt"
+                style="@style/EditTextList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/placementPercentageTv"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/nunito"
+                android:hint="Type here"
+                android:inputType="numberDecimal"
+                android:textSize="16sp" />
+
+         <Button
+             android:id="@+id/colgImgIdBtn"
+             android:layout_width="match_parent"
+             android:layout_height="30dp"
+             style="@style/Theme.EnggAdminApp"
+             android:layout_below="@id/placementPercentageEt"/>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/ImgrecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_below="@id/colgImgIdBtn"
+               />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/colgDescriptionTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/nunito_semibold"
+                android:text="College Description :"
+                android:textAllCaps="false"
+                android:textColor="@color/textColorDark"
+                android:textSize="18sp"
+                android:layout_below="@id/ImgrecyclerView"
+                />
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/productSuggestionDescription_id"
+                style="@style/EditTextList"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/nunito"
+                android:gravity="start|top"
+                android:hint="Description"
+                android:inputType="textMultiLine"
+                android:maxLength="500"
+                android:scrollIndicators="right"
+                android:scrollbarAlwaysDrawVerticalTrack="true"
+                android:textSize="16sp"
+               android:layout_below="@id/colgDescriptionTv"
+                />
+
+            <ProgressBar
+                android:id="@+id/productSuggestionSaveBtnProgress_id"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:elevation="5dp"
+                android:indeterminate="true"
+                android:indeterminateTintMode="src_atop"
+                android:progressTint="@color/textColorDark"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/productSuggestionSaveBtn_id"
+                app:layout_constraintEnd_toEndOf="@+id/productSuggestionSaveBtn_id"
+                app:layout_constraintStart_toStartOf="@+id/productSuggestionSaveBtn_id"
+                app:layout_constraintTop_toTopOf="@+id/productSuggestionSaveBtn_id" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/productSuggestionSaveBtn_id"
+                style="@style/FlatButton"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:fontFamily="@font/nunito_semibold"
+                android:background="@color/colorPrimary"
+                android:text="Save"
+                android:textAllCaps="false"
+                android:textColor="@color/textColorDark"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+
+
+
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

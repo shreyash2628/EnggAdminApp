@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
         DocumentReference docRef = db.collection("Admin").document("doc1");
 
-        
+
 
 
         mobNoLayout = findViewById(R.id.mobNo);
