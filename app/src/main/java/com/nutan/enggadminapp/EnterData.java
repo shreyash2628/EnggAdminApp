@@ -41,8 +41,8 @@ import java.util.UUID;
 
 public class EnterData extends AppCompatActivity {
 
-    String colgNameStr,colgAddStr,feesStr,cetScoreStr,placementPercentageStr,colgDescriptionStr;
-    EditText colgNameEt,colgAddEt,feesEt,cetScoreEt,placementPercentageEt,addBranch,colgDescription;
+    String colgNameStr,colgAddStr,feesStr,cetScoreStr,placementPercentageStr,colgDescriptionStr,localityStr;
+    EditText colgNameEt,colgAddEt,feesEt,cetScoreEt,placementPercentageEt,addBranch,colgDescription,localityEt;
     Button imgBtn,uploadDataBtn,AddBranchBtn;
     String branch, tempbranch="";
     TextView branches;
@@ -70,11 +70,10 @@ public class EnterData extends AppCompatActivity {
         cetScoreEt =findViewById(R.id.cetScoreEt);
         placementPercentageEt =findViewById(R.id.placementPercentageEt);
         branches = findViewById(R.id.branchesId);
+        localityEt = findViewById(R.id.localityEt);
         clgImageRecyclerView = findViewById(R.id.img_preview_recycleView);
-
         imgBtn = findViewById(R.id.AddcolgImgId);
         uploadDataBtn = findViewById(R.id.upload_Data_Btn);
-
         AddBranchBtn = findViewById(R.id.AddBranchBtn);
 
 
@@ -133,6 +132,7 @@ public class EnterData extends AppCompatActivity {
                 cetScoreStr = cetScoreEt.getText().toString();
                 placementPercentageStr = placementPercentageEt.getText().toString();
                 colgDescriptionStr = colgDescription.getText().toString();
+                localityStr = localityEt.getText().toString();
 
                 map.put("collegeName",colgNameStr);
                 map.put("Address",colgAddStr);
@@ -141,6 +141,7 @@ public class EnterData extends AppCompatActivity {
                 map.put("PlacementPercentage",placementPercentageStr);
                 map.put("CollegeDescription",colgDescriptionStr);
                 map.put("CetScore",cetScoreStr);
+                map.put("locality",localityStr);
                 map.put("clgImageNo",String.valueOf(clgImagesList.size()));
 
                 db.collection("Colleges").document(colgNameStr).set(map).addOnCompleteListener(new OnCompleteListener<Void>() {

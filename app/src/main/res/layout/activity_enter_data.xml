@@ -89,12 +89,41 @@
                 android:inputType="textCapWords"
                 android:textSize="16sp" />
 
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/locality_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/address_Et"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/nunito"
+                android:text="Locality : "
+                android:textAllCaps="false"
+                android:textColor="@color/textColorDark"
+                android:textSize="16sp"
+                android:visibility="visible" />
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/localityEt"
+                style="@style/EditTextList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/locality_tv"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/nunito"
+                android:hint="Type here"
+                android:inputType="textCapWords"
+                android:textSize="16sp" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/cetScoretv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/address_Et"
+                android:layout_below="@id/localityEt"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
