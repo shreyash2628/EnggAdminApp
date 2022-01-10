@@ -126,13 +126,14 @@ public class EnterData extends AppCompatActivity {
         uploadDataBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                colgNameStr = colgNameEt.getText().toString();
-                colgAddStr = colgAddEt.getText().toString();
-                feesStr = feesEt.getText().toString();
-                cetScoreStr = cetScoreEt.getText().toString();
-                placementPercentageStr = placementPercentageEt.getText().toString();
-                colgDescriptionStr = colgDescription.getText().toString();
-                localityStr = localityEt.getText().toString();
+
+                if(validate())
+                {
+
+
+
+
+
 
                 map.put("collegeName",colgNameStr);
                 map.put("Address",colgAddStr);
@@ -167,9 +168,62 @@ public class EnterData extends AppCompatActivity {
                 });
 
 
-
+                }
             }
         });
+
+
+    }
+
+    private boolean validate() {
+
+        colgNameStr = colgNameEt.getText().toString();
+        colgAddStr = colgAddEt.getText().toString();
+        feesStr = feesEt.getText().toString();
+        cetScoreStr = cetScoreEt.getText().toString();
+        placementPercentageStr = placementPercentageEt.getText().toString();
+        colgDescriptionStr = colgDescription.getText().toString();
+        localityStr = localityEt.getText().toString();
+        if(colgNameStr == null )
+        {
+            Toast.makeText(EnterData.this, "Please enter College name", Toast.LENGTH_SHORT).show();
+            return false;
+        }else  if(colgAddStr == null )
+        {
+            Toast.makeText(EnterData.this, "Please enter College address", Toast.LENGTH_SHORT).show();
+            return false;
+        }else if(feesStr == null )
+        {
+            Toast.makeText(EnterData.this, "Please enter College fees", Toast.LENGTH_SHORT).show();
+            return false;
+        }else if(cetScoreStr == null )
+        {
+            Toast.makeText(EnterData.this, "Please enter cet score", Toast.LENGTH_SHORT).show();
+            return false;
+        }else if(placementPercentageStr == null )
+        {
+            Toast.makeText(EnterData.this, "Please enter placement %", Toast.LENGTH_SHORT).show();
+            return false;
+        }else if(colgDescriptionStr == null )
+        {
+            Toast.makeText(EnterData.this, "Please enter College description", Toast.LENGTH_SHORT).show();
+            return false;
+        }else  if(localityStr == null )
+        {
+            Toast.makeText(EnterData.this, "Please enter locality", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+           else if(clgImagesList.isEmpty())
+        {
+            Toast.makeText(EnterData.this, "Please add College Images", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+
+
+               return true;
+
+
+
 
 
     }
