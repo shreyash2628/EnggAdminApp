@@ -7,18 +7,29 @@
     android:layout_height="match_parent"
     tools:context=".EnterData">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/mainToolbar_id"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Add Colleges"
+        app:titleTextColor="@color/textColorLight"/>
+
     <androidx.core.widget.NestedScrollView
         android:id="@+id/nestedScrollView_id"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginBottom="460dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        tools:ignore="MissingConstraints">
+        app:layout_constraintTop_toBottomOf="@+id/mainToolbar_id">
 
         <RelativeLayout
             android:id="@+id/LayoutId"
+            android:paddingBottom="80dp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/colg_name_tv"
@@ -32,8 +43,7 @@
                 android:text="College Name:"
                 android:textAllCaps="false"
                 android:textColor="@color/textColorDark"
-                android:textSize="18sp"
-                />
+                android:textSize="18sp" />
 
             <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/colg_name_et"
@@ -53,6 +63,7 @@
                 android:id="@+id/address_tv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/colg_name_et"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
@@ -61,8 +72,7 @@
                 android:textAllCaps="false"
                 android:textColor="@color/textColorDark"
                 android:textSize="16sp"
-                android:visibility="visible"
-                android:layout_below="@id/colg_name_et" />
+                android:visibility="visible" />
 
 
             <androidx.appcompat.widget.AppCompatEditText
@@ -78,7 +88,6 @@
                 android:hint="Type here"
                 android:inputType="textCapWords"
                 android:textSize="16sp" />
-
 
 
             <androidx.appcompat.widget.AppCompatTextView
@@ -126,8 +135,8 @@
                 android:visibility="visible" />
 
             <androidx.appcompat.widget.AppCompatEditText
-                style="@style/EditTextList"
                 android:id="@+id/feesEt"
+                style="@style/EditTextList"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/feesTv"
@@ -186,17 +195,17 @@
                 android:textColor="@color/textColorLight"
                 android:textSize="16sp" />
 
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/img_preview_recycleView"
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
+                android:layout_height="wrap_content"
                 android:layout_below="@id/AddcolgImgId"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="16dp">
-
-
-            </androidx.recyclerview.widget.RecyclerView>
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
 
             <androidx.appcompat.widget.AppCompatTextView
@@ -229,32 +238,32 @@
                 android:textSize="16sp" />
 
 
-                <RelativeLayout
+            <RelativeLayout
                 android:id="@+id/btnRelativeLayout"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
                 android:layout_below="@id/addBranchesEt"
 
                 >
 
-                    <Button
-                        android:id="@+id/AddBranchBtn"
-                        android:layout_width="150dp"
-                        android:layout_height="40dp"
-                        android:layout_alignParentLeft="true"
-                        android:layout_marginStart="16dp"
-                        android:background="@color/black"
-                        android:text="Add Branch " />
+                <Button
+                    android:id="@+id/AddBranchBtn"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="16dp"
+                    android:background="@color/black"
+                    android:text="Add Branch " />
 
-                    <Button
-                        android:id="@+id/DoneBtnId"
-                        android:layout_width="150dp"
-                        android:layout_height="50dp"
 
-                        android:layout_alignParentRight="true"
-                        android:layout_marginEnd="4dp"
-                        android:text="Done" />
-                </RelativeLayout>
+                <TextView
+                    android:id="@+id/branchesId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/AddBranchBtn"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="10dp"></TextView>
+            </RelativeLayout>
 
 
             <androidx.appcompat.widget.AppCompatTextView

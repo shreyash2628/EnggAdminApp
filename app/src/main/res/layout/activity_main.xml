@@ -34,8 +34,7 @@
             android:orientation="horizontal"
             app:boxStrokeColor="@color/black"
             app:boxStrokeWidthFocused="1dp"
-            app:hintTextColor="#000000"
-            app:startIconDrawable="@drawable/ic_baseline_phone_android_24">
+            app:hintTextColor="#000000">
 
 
             <com.google.android.material.textfield.TextInputEditText
@@ -65,7 +64,7 @@
             app:helperText="Required"
             app:hintTextColor="#000000"
             app:passwordToggleEnabled="true"
-            app:startIconDrawable="@drawable/ic_baseline_lock_24">
+            >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"

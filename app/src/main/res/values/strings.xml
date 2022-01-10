@@ -5,7 +5,6 @@
     <string name="sign_in">Sign In</string>
 
 
-    <style name="FlatButton" parent="Widget.AppCompat.Button.Borderless">
-    </style>
+    <style name="FlatButton" parent="Widget.AppCompat.Button.Borderless"></style>
 
 </resources>
